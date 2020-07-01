@@ -1,15 +1,14 @@
 package tdd.covid;
 
 /**
- * Manager of populates of people with covid.
- * Uses two point evaluators to determine of a Person has covid-like symptoms, and whether or not they should be isolated.
- */
-public class CovidManager {
+ * Performans an covid19 evalution of a person.
+ *  */
+public class CovidEvaluator {
 
     private PointEvaluator riskPointEvaluator;
     private PointEvaluator symptomPointEvaluator;
 
-    public CovidManager(PointEvaluator riskPointEvaluator, PointEvaluator symptomPointEvaluator) {
+    public CovidEvaluator(PointEvaluator riskPointEvaluator, PointEvaluator symptomPointEvaluator) {
         this.riskPointEvaluator = riskPointEvaluator;
         this.symptomPointEvaluator = symptomPointEvaluator;
     }

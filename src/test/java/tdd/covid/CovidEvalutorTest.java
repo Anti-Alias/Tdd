@@ -9,9 +9,9 @@ import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class CovidManagerTest {
+class CovidEvalutorTest {
 
-    CovidManager manager;
+    CovidEvaluator manager;
     Person harry;
     Person larry;
     Person marry;
@@ -20,7 +20,7 @@ class CovidManagerTest {
 
     @BeforeEach
     void setup () {
-        manager = new CovidManager(new RiskPointEvaluator(), new SymptomPointEvaluator());
+        manager = new CovidEvaluator(new RiskPointEvaluator(), new SymptomPointEvaluator());
         harry = new Person("Harry", "Lastnamington", LocalDate.parse("1970-01-01"), Collections.emptySet(), Collections.emptySet());
         larry = new Person("Larry", "Lastnamington", LocalDate.parse("1950-01-01"), Set.of(Condition.DIABETES), Collections.emptySet());
         marry = new Person("Marry", "Lastnamington", LocalDate.parse("1990-01-01"), Collections.emptySet(), Set.of(Symptom.FATIGUE, Symptom.DRY_COUGH));

@@ -5,5 +5,5 @@ package tdd.covid;
  * Evaluates "points" of a Person.
  */
 public interface PointEvaluator {
-    public int evaluate(Person person);
+    int evaluate(Person person);
 }
